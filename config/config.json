@@ -1,1 +1,8 @@
-{}
+{
+  "theme": {
+    "slug": "boys-girls-club",
+    "name": "Boys and Girls Club",
+    "author": "Ben Weibel",
+    "PHPNamespace": "WP_Rig\\WP_Rig"
+  }
+}
