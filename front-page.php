@@ -13,20 +13,23 @@ get_header();
 
 // Use grid layout if blog index is displayed.
 wp_rig()->print_styles( 'wp-rig-content', 'wp-rig-front-page' );
-
 ?>
-	<?php get_template_part('template-parts/content/hero_image'); ?>
-	<main id="primary" class="site-main">
 
-		<?php
+<!-- Hero Image -->
+<?php get_template_part('template-parts/content/hero_image'); ?>
 
-		while ( have_posts() ) {
-			the_post();
-			get_template_part( 'template-parts/content/entry_content');		
-		}
+<!-- Main Content -->
+<main id="primary" class="site-main">
+	<?php
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'template-parts/content/entry_content');		
+	}
+	?>
+</main><!-- #primary -->
 
+<!-- Feature Boxes -->
+<?php get_template_part( 'template-parts/content/feature_box_list' ); ?>
 
-		?>
-	</main><!-- #primary -->
 <?php
 get_footer();
