@@ -87,7 +87,6 @@
 	}
 
 	.site-header {
-		grid-column: span 2;
 	}
 
 	.site-main {
@@ -199,7 +198,11 @@ select {
 --------------------------------------------------------------*/
 
 .site-header {
-	padding-bottom: 1em;
+	position: sticky;
+	top: 0;
+}
+
+.site-header {
 }
 
 .header-image {
@@ -383,7 +386,7 @@ select {
 .main-navigation {
 	clear: both;
 	display: block;
-	margin: 0 auto 2em;
+	margin: 0 auto 0;
 	padding: 0 1em;
 	max-width: var(--content-width);
 	font-family: var(--highlight-font-family);

@@ -2,10 +2,16 @@
  * Custom styles for the front-page.php template.
  */
 
-@media (--sidebar-query) {
+@import "_hero-image.css";
+
+.hero {
+	grid-column: span 2;
+}
+
+@media (--wide-window-query) {
 
 	.site {
-		margin: 0 1em;
+		/* margin: 0 1em; */
 		display: grid;
 		grid-template-columns: 1fr;
 	}
