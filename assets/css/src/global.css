@@ -74,6 +74,7 @@
 .site {
 	margin: 0 auto;
 	max-width: 100%;
+	min-height: 100vh;
 }
 
 @media (--sidebar-query) {
@@ -215,12 +216,12 @@ select {
 
 .custom-logo-link {
 	display: inline-block;
-	margin: 0 auto 1em;
+	margin: 0 auto
 }
 
 .site-branding {
 	text-align: center;
-	padding: 60px 0 1.75em;
+	padding: 5px 1rem;
 }
 
 .site-title {
@@ -573,10 +574,14 @@ select {
 	padding: 2em 0;
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
+	background: var(--color-theme-grey);
+	background-image: url("../images/BGCB-Website-Ptrn-Geometry-Grey.png");
+	color: var(--color-theme-white);
 }
 
 .site-info {
 	text-align: center;
+	font-size: var(--font-size-small);
 }
 
 /*--------------------------------------------------------------
