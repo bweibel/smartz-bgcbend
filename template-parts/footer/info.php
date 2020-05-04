@@ -10,9 +10,10 @@ namespace WP_Rig\WP_Rig;
 ?>
 
 <div class="site-info">
-	<span>
+
 		<?php
-			printf("© %u %s.", date('Y'), get_bloginfo());
+			printf("	<span>© %u %s.</span></br>", date('Y'), get_bloginfo());
+			printf("	<span>BGCB is a 501(c)(3) non-profit organization.</span>")
 		?>
 	</span>
 	<span>All rights reserved.</span>
