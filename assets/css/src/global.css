@@ -198,11 +198,10 @@ select {
 --------------------------------------------------------------*/
 
 .site-header {
+	display: flex;
 	position: sticky;
 	top: 0;
-}
-
-.site-header {
+	
 }
 
 .header-image {

@@ -345,20 +345,6 @@ msgstr ""
 msgid "Page navigation"
 msgstr ""
 
-#: template-parts/footer/info.php:13
-msgid "https://wordpress.org/"
-msgstr ""
-
-#. translators: %s: CMS name, i.e. WordPress.
-#: template-parts/footer/info.php:16
-msgid "Proudly powered by %s"
-msgstr ""
-
-#. translators: Theme name.
-#: template-parts/footer/info.php:22
-msgid "Theme: %s by the contributors."
-msgstr ""
-
 #: template-parts/header/navigation.php:16
 msgid "Main menu"
 msgstr ""
