@@ -10,9 +10,29 @@
   text-align: center;
 }
 
+.feature-box .button:after {
+	content: '';
+	position: absolute;
+	z-index: 0;
+	background: url(../images/BGCB-Website-Txtr-Arrow_Shaped_Dots.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 35px;
+  top: 16px;
+  transition: top .2s;
+}
+
+.feature-box .button:hover:after {
+  top: 14px;
+}
+
 .feature-box:nth-child(4n+1) {
   background-color: var(--color-theme-purple);
   grid-column: 1/2;
+}
+
+.feature-box:nth-child(4n+1) .button {
+  color: var(--color-theme-purple);
 }
 
 .feature-box:nth-child(4n+2) {
@@ -21,15 +41,27 @@
   grid-column: 2/3;
 }
 
+.feature-box:nth-child(4n+2) .button{
+  color: var(--color-theme-blue);
+}
+
 .feature-box:nth-child(4n+3) {
   background-color: var(--color-theme-green);
   grid-column: 1/2;
+}
+
+.feature-box:nth-child(4n+3) .button{
+  color: var(--color-theme-green);
 }
 
 .feature-box:nth-child(4n+4) {
   background-color: var(--color-theme-orange);
   grid-row: 3/4;
   grid-column: 1/3;
+}
+
+.feature-box:nth-child(4n+4) .button{
+  color: var(--color-theme-orange);
 }
 
 @media (--wide-window-query) {

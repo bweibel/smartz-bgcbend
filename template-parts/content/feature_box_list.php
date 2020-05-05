@@ -13,7 +13,7 @@ $order = get_field('order');
 
 $args = array( 
   'post_type' => 'featured_boxes',
-  'order_by' => $order
+  'orderby' => 'date'
 );
 $the_query = new WP_Query( $args ); 
 

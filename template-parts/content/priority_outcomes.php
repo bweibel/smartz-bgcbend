@@ -15,25 +15,13 @@ $args = array(
 
 $theme = get_template_directory_uri();
 
-
+$outcomes = get_field('outcomes');
 ?>
 
-<section class="priority-outcomes" >
+<section class="priority-outcomes page-content" >
 
   <?php
-		echo get_field('outcomes_copy');
+		echo $outcomes['content'];
 	?>
-
-  <?php $the_query = new WP_Query( $args ); ?>
-
-  <?php if ( $the_query->have_posts() ) : ?>
-    <!-- the loop -->
-    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-      <?php get_template_part( 'template-parts/content/outcome' ); ?>
-    <?php endwhile; ?>
-    <!-- end of the loop -->
-
-    <?php wp_reset_postdata(); ?>
-  <?php endif; ?>
 
 </section>

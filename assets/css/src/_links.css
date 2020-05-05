@@ -27,3 +27,61 @@ a:hover,
 a:active {
 	outline: 0;
 }
+
+.button ,
+.button:visited,
+.button:active{
+	display: inline-block;
+	background: #f9fafb;
+	background: var(--color-theme-white);
+	color: #333;
+	color: var(--global-font-color);
+	text-transform: uppercase;
+	padding: 1rem 2em;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 16px;
+	position: relative;
+	z-index: 1;
+	transform: translateY(0);
+	transition: transform 0.2s;
+	box-shadow: 0 10px 25px 0px rgba(0,0,0,.2);
+}
+
+.button:hover {
+	color: #333;
+	transform: translateY(2px);
+	box-shadow: 0 8px 25px 0px rgba(0,0,0,.2)
+}
+
+.button-orange,
+.button-orange:hover,
+.button-orange:visited,
+.button-orange:active {
+	background: var(--color-theme-orange);
+	color: var(--color-theme-white);
+}
+
+.button-purple,
+.button-purple:hover,
+.button-purple:visited,
+.button-purple:active {
+	background: var(--color-theme-purple);
+	color: var(--color-theme-white);
+}
+
+.button-blue,
+.button-blue:hover,
+.button-blue:visited,
+.button-blue:active {
+	background: var(--color-theme-blue);
+	color: var(--color-theme-white);
+}
+
+.button-green,
+.button-green:hover,
+.button-green:visited,
+.button-green:active {
+	background: var(--color-theme-green);
+	color: var(--color-theme-white);
+}

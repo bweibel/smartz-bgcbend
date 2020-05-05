@@ -7,6 +7,68 @@
 
 .hero {
 	grid-column: span 2;
+	position: relative;
+}
+
+.hero .hero-cta {
+	background: white;
+	color: var(--color-theme-blue);
+	padding: 1em;
+}
+
+.hero-cta p {
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+@media (--wide-window-query) {
+	.hero .hero-cta {
+		position: absolute;
+		bottom: -1rem;
+		left: 20%;
+	}
+}
+
+.outcome-list {
+	max-width: 60em;
+}
+
+@media (--wide-window-query) {
+	.outcome-list {
+		justify-content: center;
+		display: flex;
+	}
+}
+
+.outcome {
+	padding: 1em;
+	font-size: 16px;
+	text-align: center;
+}
+
+.outcome img {
+	margin: auto;
+	max-width: 200px;
+}
+
+.outcome p {
+	max-width: 20em;
+	margin: auto;
+}
+
+.outcomes-copy {
+	text-align: center;
+	font-weight: bold;
+}
+
+@media (--wide-window-query) {
+	.outcomes-copy {
+		font-size: 38px;
+		text-align: center;
+		font-weight: bold;
+	}
 }
 
 @media (--wide-window-query) {
