@@ -1,0 +1,36 @@
+@import "_custom-properties.css";
+
+/*--------------------------------------------------------------
+# Hero Image
+--------------------------------------------------------------*/
+.feature-box {
+  padding: 1em;
+  color: var(--color-theme-white);
+  background-color: var(--color-theme-grey);
+  text-align: center;
+}
+
+.feature-box:nth-child(4n+1) {
+  background-color: var(--color-theme-purple);
+}
+
+.feature-box:nth-child(4n+2) {
+  background-color: var(--color-theme-blue);
+}
+
+.feature-box:nth-child(4n+3) {
+  background-color: var(--color-theme-green);
+}
+
+.feature-box:nth-child(4n+4) {
+  background-color: var(--color-theme-orange);
+}
+
+@media (--wide-window-query) {
+  .feature-box-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+}

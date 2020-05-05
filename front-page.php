@@ -18,18 +18,25 @@ wp_rig()->print_styles( 'wp-rig-content', 'wp-rig-front-page' );
 <!-- Hero Image -->
 <?php get_template_part('template-parts/content/hero_image'); ?>
 
-<!-- Main Content -->
+<!-- Feature Boxes -->
+<?php get_template_part( 'template-parts/content/feature_box_list' ); ?>
+
 <main id="primary" class="site-main">
+
+	<!-- Priority Outcomes -->
+	<?php get_template_part( 'template-parts/content/priority_outcomes' ); ?>
+
+	<!-- Main Content -->
 	<?php
-	while ( have_posts() ) {
-		the_post();
-		get_template_part( 'template-parts/content/entry_content');		
-	}
+		while ( have_posts() ) {
+			the_post();
+			get_template_part( 'template-parts/content/entry_content');		
+		}
 	?>
 </main><!-- #primary -->
 
 <!-- Feature Boxes -->
-<?php get_template_part( 'template-parts/content/feature_box_list' ); ?>
+<?php get_template_part( 'template-parts/content/newsletter_signup' ); ?>
 
 <?php
 get_footer();
