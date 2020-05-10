@@ -12,7 +12,7 @@
 namespace WP_Rig\WP_Rig;
 
 ?>
-
+	<?php get_template_part("template-parts/content/donate_cta"); ?>
 	<footer id="colophon" class="site-footer">
 		<?php get_template_part( 'template-parts/footer/info' ); ?>
 	</footer><!-- #colophon -->
