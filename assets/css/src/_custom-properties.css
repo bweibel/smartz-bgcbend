@@ -8,10 +8,11 @@
 :root {
 	--global-font-color: #333;
 	--global-font-family: "Helvetica Neue", sans-serif;
-	--global-font-size: 20;
+	--global-font-size: 18;
 	--global-font-line-height: 1.4;
 	--highlight-font-family: "Helvetica Neue", "Arial Narrow", sans-serif;
 	--content-width: 45rem;
+	--content-width-large: 60rem;
 	--dropdown-symbol-width: 0.7em;
 
 	/* Custom editor colors */
