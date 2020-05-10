@@ -16,6 +16,10 @@
 	padding: 1em;
 }
 
+.hero .hero-cta img {
+	max-width: 300px;
+}
+
 .hero-cta p {
 	font-size: 24px;
 	font-weight: bold;
