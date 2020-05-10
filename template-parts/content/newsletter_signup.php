@@ -13,7 +13,7 @@ namespace WP_Rig\WP_Rig;
   <div class="newsletter-form">
     <span class="newsletter-intro">Sign up for our Newsletter:</span>
       <?php 
-        echo do_shortcode('[contact-form-7 id="67" title="Newsletter Signup"]');
+        echo do_shortcode('[contact-form-7 id="35" title="Newsletter Signup"]');
       ?>
   </div>
   

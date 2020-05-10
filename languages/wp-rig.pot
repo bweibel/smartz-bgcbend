@@ -36,6 +36,10 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
+#: page-family_plus.php:4
+msgid "Wizard Template"
+msgstr ""
+
 #. translators: 1: required WP version number, 2: required PHP version number, 3: available WP version number, 4: available PHP version number
 #: inc/back-compat.php:25
 msgid "WP Rig requires at least WordPress version %1$s and PHP version %2$s. You are running versions %3$s and %3$s respectively. Please update and try again."
