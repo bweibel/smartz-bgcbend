@@ -22,6 +22,7 @@ if ( 'loading' === document.readyState ) {
 function initNavigation() {
 	initNavToggleSubmenus();
 	initNavToggleSmall();
+	initMasthead();
 }
 
 /**
@@ -162,6 +163,15 @@ function initEachNavToggleSmall( nav ) {
 		nav.classList.toggle( 'nav--toggled-on' );
 		e.target.setAttribute( 'aria-expanded', 'false' === e.target.getAttribute( 'aria-expanded' ) ? 'true' : 'false' );
 	}, false );
+}
+
+function initMasthead() {
+	const header = document.getElementById( 'masthead' );
+	window.addEventListener ( 'scroll', () => {
+		const screenPos = window.pageYOffset;
+		if ( screenPos > 0 ) header.classList.add( 'sticky' );
+		else header.classList.remove( 'sticky' );
+	});
 }
 
 /**
