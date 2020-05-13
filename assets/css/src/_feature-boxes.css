@@ -4,11 +4,16 @@
 # Hero Image
 --------------------------------------------------------------*/
 .feature-box {
-  padding: 1em;
+  padding: 4em 1em;
   color: var(--color-theme-white);
   background-color: var(--color-theme-grey);
   text-align: center;
 }
+
+.feature-box .title {
+  font-size: 28px;
+}
+
 
 .feature-box .button:after {
 	content: '';
