@@ -11,6 +11,12 @@ namespace WP_Rig\WP_Rig;
 
 <div class="site-branding">
 	<?php the_custom_logo(); ?>
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="white-logo-link" rel="home">
+		<img src="<?php echo get_template_directory_uri() . '/assets/images/BGCB-Website-Logo-Stacked-White.svg'?>" class="custom-logo" alt="BGCB Logo" sizes="100vw" width="119" height="67">
+	</a>
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="mobile-logo-link" rel="home">
+		<img src="<?php echo get_template_directory_uri() . '/assets/images/BGCB-Website-Mobile-Logo-Horizontal-FC.svg'?>" class="custom-logo" alt="BGCB Logo" sizes="100vw">
+	</a>
 
 	<?php
 	if ( is_front_page() && is_home() ) {
