@@ -11,6 +11,8 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 	return;
 }
 
+$theme = get_template_directory_uri();
+
 ?>
 
 <nav id="site-navigation" class="main-navigation nav--toggle-sub nav--toggle-small" aria-label="<?php esc_attr_e( 'Main menu', 'wp-rig' ); ?>"
@@ -46,7 +48,16 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 		}
 		?>
 	>
-		<?php esc_html_e( 'Menu', 'wp-rig' ); ?>
+		<!-- <?php esc_html_e( 'Menu', 'wp-rig' ); ?> -->
+		<div class="open-button">
+			<img src="<?php echo $theme; ?>/assets/images/BGCB-Website-Mobile-Icon-Menu-Normal.svg" alt="Mobile Menu Closed">
+			<span>Menu</span>
+		</div>
+		<div class="close-button">
+			<img src="<?php echo $theme; ?>/assets/images/BGCB-Website-Mobile-Icon-Menu-Active.svg" alt="Mobile Menu Open">
+			<span>Close</span>
+		</div>
+		
 	</button>
 
 	<div class="primary-menu-container">

@@ -208,6 +208,7 @@ select {
 	width: 100%;
 	z-index: 10;
 	box-shadow: 0 0px 15px 0px rgba(0,0,0,.3);
+	min-height: 40px;
 }
 
 .site-header .white-logo-link {
@@ -266,7 +267,7 @@ select {
 
 .site-branding {
 	text-align: center;
-	padding: 5px 1rem 0;
+	padding: 5px 1rem 5px;
 }
 
 @media (--wide-menu-query) {
@@ -304,6 +305,66 @@ select {
 /*--------------------------------------------------------------
 # Main Content Area
 --------------------------------------------------------------*/
+/* Page Headers */
+.entry-header{
+	background: var(--color-theme-grey);
+	background-image: url("../images/BGCB-Website-Ptrn-Geometry-Grey.png");
+	background-attachment: fixed;
+	min-height: 40vh;
+	justify-content: center;
+	padding: 5em 0 2em;
+}
+@media (--wide-window-query) {
+	.entry-header{
+	display: flex;
+	}
+}
+
+.entry-header.blue{
+	background-image: url("../images/BGCB-Website-Ptrn-Geometry-Blue.png");
+}
+
+.entry-header.green{
+	background-image: url("../images/BGCB-Website-Ptrn-Geometry-Green.png");
+}
+
+.entry-header.purple{
+	background-image: url("../images/BGCB-Website-Ptrn-Geometry-Purple.png");
+}
+
+.entry-header.orange{
+	background-image: url("../images/BGCB-Website-Ptrn-Geometry-Purple.png");
+}
+
+.entry-title{
+	text-align: center;
+	margin:	1em;
+	color: var(--color-theme-white);
+	align-self: center;
+}
+
+@media (--wide-window-query) {
+	.page .entry-title{
+		margin: 1em;
+		/* flex-basis: 20%; */
+	}
+}
+
+.page .post-thumbnail {
+	margin: 2em auto;
+	padding: 1em;
+	background: white;
+	transform: rotate(3deg);
+	max-width: 35em;
+}
+
+@media (--wide-window-query) {
+	.page .post-thumbnail {
+		margin: 2em;
+		align-self: center;
+	}
+}
+
 .site-main {
 	background: url(../images/BGCB-Website-Txtr-Circle_Shaped_Dots-Top_Left.svg) top left, url(../images/BGCB-Website-Txtr-Circle_Shaped_Dots-Bottom_Right.svg) bottom right;
 	background-size: 10rem, 10rem;
@@ -316,20 +377,27 @@ select {
 --------------------------------------------------------------*/
 .nav--toggle-small .menu-toggle {
 	display: block;
-	margin: 1.2em auto;
-	padding: 0.6em 1.2em 0.5em;
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
-	font-size: 80%;
+	font-size: 70%;
 	text-transform: uppercase;
-	border: 2px solid var(--color-theme-blue);
 	border-radius: 0;
-	background: transparent;
-	color: var(--color-theme-blue);
+	color: white;
+	position: absolute;
+	padding: 0;
+	right: .2rem;
+	top: -2rem;
+	width: 4rem;
+	height: 4rem;
+	box-shadow: 0 4px 6px 1px rgba(0,0,0,.4);
+	transition: background .4s , transform .4s ease-out;
 }
 
 .nav--toggle-small .menu {
-	display: none;
+	/* display: none; */
+	height: 0;
+	overflow: hidden;
+	transition: height .2s ease-out;
 }
 
 .nav--toggle-sub .dropdown,
@@ -337,14 +405,68 @@ select {
 	display: none;
 }
 
-@media (--narrow-menu-query) {
+@media (--narrow-menu-query) { }
+
+@media (--mid-menu-query) {
 
 	.nav--toggle-small.nav--toggled-on .menu {
-		display: block;
+		height: 100vh;
+		overflow: auto;
 	}
+
+	.nav--toggle-small .menu-toggle {
+		background-color: var(--color-theme-blue);
+		transform: rotateY(0deg);
+	}
+	.nav--toggle-small.nav--toggled-on .menu-toggle {
+		background-color: var(--color-theme-orange);
+		transform: rotateY(180deg);
+	}
+
+	.nav--toggle-small .menu-toggle .close-button,
+	.nav--toggle-small.nav--toggled-on .menu-toggle .open-button {
+		visibility: hidden;
+		transform: rotateY(90deg);
+		transition-delay: 0s;
+	}
+	.nav--toggle-small .menu-toggle .open-button,
+	.nav--toggle-small.nav--toggled-on .menu-toggle .close-button{
+		visibility: visible;
+		transform: rotateY(0deg);
+		transition-delay: .1s;
+	}
+
+	.nav--toggle-small.nav--toggled-on .menu-toggle .close-button {
+		transform: rotateY(180deg);
+	}
+
+	.menu-toggle .open-button, 
+	.menu-toggle .close-button {
+		padding: 0.5em .5em;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		transition: transform .2s ease-out, visibility .2s ease-out;
+	}
+
+	.nav--toggle-small .menu-toggle img{
+		width: 2rem;
+		height: 2rem;
+		margin: 0 auto .5em;
+	}
+
+	.menu-toggle .open-button img {
+		padding: .4em 0;
+	}
+
 }
 
 @media (--wide-menu-query) {
+	.nav--toggle-small .menu {
+		height: auto;
+	}
 
 	.nav--toggle-small .menu-toggle {
 		display: none;
@@ -455,15 +577,32 @@ select {
 	font-stretch: condensed;
 }
 
+@media (--narrow-menu-query) {
+	.main-navigation {
+		width: 100%;
+	}
+}
+
+@media (--mid-menu-query) {
+	.main-navigation {
+		position: absolute;
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+		top: 44px;
+		background: var(--color-theme-blue);
+		z-index: 1;
+		right: 0;
+	}
+}
+
 .main-navigation a {
 	display: block;
 	width: 100%;
-	padding: 0.5em 1em 0.5em 0;
+	padding: 1em 1em 0.5em 0;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 20px;
 	font-weight: bold;
-	color: var(--color-theme-blue);
+	color: var(--color-theme-white);
 }
 
 @media (--wide-menu-query) {
@@ -472,7 +611,7 @@ select {
 		font-size: 14px;
 		color: var(--color-theme-white);
 		border-bottom: 4px solid transparent;
-		transition: border .3s;
+		transition: border .2s cubic-bezier(.22,.61,.36,1)
 	}
 
 	.sticky .main-navigation a {
@@ -482,6 +621,12 @@ select {
 	.main-navigation a:hover,
 	.main-navigation a:focus {
 		/* text-decoration: underline; */
+		border-bottom: 4px solid white;
+	}
+
+	.sticky .main-navigation a:hover,
+	.sticky .main-navigation a:focus {
+		/* text-decoration: underline; */
 		border-bottom: 4px solid var(--color-theme-blue);
 	}
 
@@ -489,8 +634,8 @@ select {
 		background: var(--color-theme-blue);
 		color: white;
 		margin-top: -30px;
-		padding-top: 30px;
-		padding-bottom: 14px;
+		padding-top: 34px;
+		padding-bottom: 10px;
 	}
 	
 	.main-navigation ul li:last-child a:hover,
@@ -670,6 +815,7 @@ select {
 	font-stretch: condensed;
 	background: var(--color-theme-grey);
 	background-image: url("../images/BGCB-Website-Ptrn-Geometry-Grey.png");
+	background-attachment: fixed;
 	color: var(--color-theme-white);
 }
 
@@ -707,30 +853,6 @@ select {
 .newsletter-signup .button {
 	text-align: center;
 	margin-top: 10px;
-}
-
-.page .entry-header{
-	background: var(--color-theme-grey);
-	background-image: url("../images/BGCB-Website-Ptrn-Geometry-Blue.png");
-	min-height: 40vh;
-	display: flex;
-	justify-content: center;
-	padding-top: 60px;
-}
-
-.page .entry-title{
-	margin:	1em;
-	color: var(--color-theme-white);
-	align-self: center;
-}
-
-.page .post-thumbnail {
-	margin: 4em;
-	max-width: 400px;
-	align-self: center;
-	padding: 1em;
-	background: white;
-	transform: rotate(3deg);
 }
 
 .donate-cta,
@@ -818,11 +940,36 @@ select {
 
 	.services-title{
 		font-size: 40px;
+		margin: 2em auto;
 	}
-	
 }
 
 /* Family Services */
+.family-header{
+	background: var(--color-theme-grey);
+	background-image: url("../images/BGCB-Website-Ptrn-Geometry-Blue.png");
+	background-attachment: fixed;
+	min-height: 100vh;
+	justify-content: center;
+	padding: 2em 0;
+}
+
+@media (--wide-window-query) {
+	.family-header{
+		display: flex;
+		padding: 5em 1em 3em 1em;
+	}
+}
+
+.family-header .entry-content{
+	color: white;
+	margin-bottom: 3em;
+	align-self: center;
+}
+
+.family-header .entry-content h1{
+	font-size: var(--font-size-larger);
+}
 
 .service {
 	padding: 1em;
@@ -862,16 +1009,199 @@ select {
 	}
 }
 
-.blue {
+/* Programs */
+
+.programs-container {
+	margin: 2em auto;
+	max-width: var(--content-width-large);
+}
+
+.programs-container h1{
+	text-align: center;
+	margin: 2em;
+}
+
+.programs-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.programs-list .program {
+	flex-basis: 20em;
+	min-width: 30%;
+	margin-bottom: 4em;
+	flex-wrap: wrap;
+}
+
+.program .content-box {
+	display: none;	
+}
+
+.program .title-box {
 	background: var(--color-theme-blue);
-	padding: 4em 0;
+	color: white;
+	text-align: center;
+	padding: 1em;
+}
+
+.program .button {
+	margin: 1em auto;
+}
+
+.program:nth-child(4n+1) .title-box {
+	background: var(--color-theme-blue);
+}
+.program:nth-child(4n+1) .title-box .button {
+	color: var(--color-theme-blue);
+}
+.program:nth-child(4n+2) .title-box {
+	background: var(--color-theme-orange);
+}
+.program:nth-child(4n+2) .title-box  .button{
+	color: var(--color-theme-orange);
+}
+.program:nth-child(4n+3) .title-box {
+	background: var(--color-theme-purple);
+}
+.program:nth-child(4n+3) .title-box .button{
+	color: var(--color-theme-purple);
+}
+.program:nth-child(4n+4) .title-box {
+	background: var(--color-theme-green);
+}
+.program:nth-child(4n+4) .title-box  .button{
+	color: var(--color-theme-green);
+}
+
+.program .title {
+	margin: 0;
+}
+
+.program .subtitle {
+	margin: 0;
+	font-weight: normal;
+	font-size: var(--font-size-small);
+}
+
+.blue-container {
+	background: var(--color-theme-blue);
+	padding: 4em 2em;
+}
+
+.blue-container .contact-info {
+	color: white;
+	text-align: center;
+}
+
+.blue-container .contact-info a,
+.blue-container .contact-info a:hover,
+.blue-container .contact-info a:visited {
+	color: white;
 }
 
 .enrollment {
+	padding: 2em;
 	background: var(--color-theme-white);
-	height: 400px;
+	margin: 2em;
+}
+
+.enrollment .title{
+	color: var(--color-theme-blue);
+	font-size: var(--font-size-larger);
+	max-width: 10em;
+	margin: 0;
+}
+
+.enrollment .action {
+	text-align: center;
+}
+
+.enrollment .action img {
+	max-width: 5em;
+	margin: 0em auto;
+	padding-left: 1em;
+}
+
+.enrollment .action .button {
 	margin: 1em;
 }
+
+@media (--wide-window-query) {
+	.enrollment {
+		display: flex;
+	}
+	.enrollment .text {
+		padding: 0 2em;
+		margin-right: 2em;
+		border-left: solid .4em var(--color-theme-purple);
+		border-right: solid .2em var(--color-theme-lightgrey);
+	}
+
+	.enrollment .action img {
+		max-width: 100%;
+		padding-left: 2em;
+	}
+	
+}
+
+/* Team */
+.team-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	position: relative;
+}
+
+.team-card {
+	max-width: 20em;
+	color: white;
+	padding: 1em;
+	position: relative;
+	background-image: url("../images/BGCB-Website-Ptrn-Geometry-Blue.png");
+	box-shadow: 0 10px 25px 0px rgba(0,0,0,.2);
+	transition: transform .2s ;
+	text-align: center;
+}
+
+.team-card:hover {
+	box-shadow: 0 0px 15px 0px rgba(0,0,0,.2);
+	transform: translateY(3px);
+}
+
+.team-card img {
+	margin: auto;
+}
+
+.team-card .team-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.team-member.wrap {
+	margin: 2em auto;
+	padding: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	background-image: url("../images/BGCB-Website-Ptrn-Geometry-Blue.png");
+}
+
+.team-member .team-description {
+	color: white;
+	padding: 1em;
+	margin-right: 2em;
+	min-width: 20em;
+}
+
+.team-member .post-thumbnail {
+	flex-basis: auto;
+}
+
+
 
 /*--------------------------------------------------------------
 # Infinite scroll

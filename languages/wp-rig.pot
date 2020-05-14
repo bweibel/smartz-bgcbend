@@ -37,7 +37,15 @@ msgid "Skip to content"
 msgstr ""
 
 #: page-family_plus.php:4
-msgid "Wizard Template"
+msgid "Family Plus Template"
+msgstr ""
+
+#: single-team_member.php:3
+msgid "Custom Post Template"
+msgstr ""
+
+#: team_page.php:3
+msgid "Team Template"
 msgstr ""
 
 #. translators: 1: required WP version number, 2: required PHP version number, 3: available WP version number, 4: available PHP version number
@@ -349,14 +357,14 @@ msgstr ""
 msgid "Page navigation"
 msgstr ""
 
-#: template-parts/header/navigation.php:16
+#: template-parts/header/navigation.php:18
 msgid "Main menu"
 msgstr ""
 
-#: template-parts/header/navigation.php:39
+#: template-parts/header/navigation.php:41
 msgid "Open menu"
 msgstr ""
 
-#: template-parts/header/navigation.php:49
+#: template-parts/header/navigation.php:51
 msgid "Menu"
 msgstr ""

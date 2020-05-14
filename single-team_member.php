@@ -19,9 +19,12 @@ get_header();
 
 wp_rig()->print_styles( 'wp-rig-content' );
 
+
+$colors = ['blue', 'green', 'orange', 'purple'];
+$color = $colors[rand(0, 3)];
 ?>
-	<main id="primary" class="site-main">
-		<header class="entry-header fancy-background">
+	<main id="primary" class="site-main page">
+		<header class="entry-header <?php echo $color ?>">
 			<h1 class="entry-title">Meet the Team</h1>
 		</header>
 		<?php

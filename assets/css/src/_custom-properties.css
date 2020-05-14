@@ -12,7 +12,7 @@
 	--global-font-line-height: 1.4;
 	--highlight-font-family: "Helvetica Neue", "Arial Narrow", sans-serif;
 	--content-width: 45rem;
-	--content-width-large: 70rem;
+	--content-width-large: 75rem;
 	--dropdown-symbol-width: 0.7em;
 
 	/* Custom editor colors */
@@ -26,6 +26,7 @@
 	--color-theme-yellow: #f1c40f;
 	--color-theme-black: #1c2833;
 	--color-theme-grey: #3c3c3c;
+	--color-theme-lightgrey: #b4b4b4;
 	--color-theme-white: #f9fafb;
 
 	--color-link: #0073aa;
@@ -36,7 +37,7 @@
 	--color-quote-citation: #6c7781;
 
 	/* Custom editor font sizes */
-	--font-size-small: calc(16 / var(--global-font-size) * 1.2rem);
+	--font-size-small: calc(16 / var(--global-font-size) * 1rem);
 	--font-size-regular: calc(var(--global-font-size) / 16 * 1rem);
 	--font-size-large: calc(36 / var(--global-font-size) * 1rem);
 	--font-size-larger: calc(48 / var(--global-font-size) * 1rem);
