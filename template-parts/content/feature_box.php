@@ -16,7 +16,7 @@ $order = get_field('order');
 ?>
 
 <div class="feature-box" >
-  <div class="wrap">
+  <div class="wrap-large">
     <?php the_title('<h3 class="title">', '</h3>') ?>
     <?php the_content( ); ?>
   </div>

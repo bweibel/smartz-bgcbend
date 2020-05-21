@@ -74,7 +74,7 @@
 	max-width: var(--content-width);
 	margin: auto;
 }
-
+ 
 .wrap-large {
 	padding-right: 1.5rem;
 	padding-left: 1.5rem;
@@ -82,8 +82,9 @@
 	margin: auto;
 }
 
-.page-header,
+/* .page-header, */
 /* .entry-header, */
+.post,
 .entry-footer,
 .site-info,
 .post-navigation,
@@ -100,7 +101,7 @@
 	.page-content > *,
 	.entry-content > *,
 	.entry-summary > *,
-	.page-header,
+	/* .page-header, */
 	/* .entry-header, */
 	.entry-footer,
 	.site-info,
