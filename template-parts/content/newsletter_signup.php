@@ -9,8 +9,8 @@ namespace WP_Rig\WP_Rig;
 
 ?>
 
-<section class="newsletter-signup page-content">
-  <div class="newsletter-form">
+<section class="newsletter-signup ">
+  <div class="newsletter-form wrap-large">
     <span class="newsletter-intro">Sign up for our Newsletter:</span>
       <?php 
         echo do_shortcode('[contact-form-7 id="35" title="Newsletter Signup"]');

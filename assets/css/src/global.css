@@ -899,6 +899,14 @@ select {
 	text-align: center;
 }
 
+@media (--wide-window-query) {
+	.newsletter-form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
 .page-content.newsletter-signup {
 	margin-top: 0;
 }
@@ -911,14 +919,31 @@ select {
 
 .newsletter-intro {
 	text-align: center;
+	display: inline-block;
 	color: var(--color-theme-white);
-	font-size: var(--font-size-small);
+	/* font-size: var(--font-size-large); */
+	font-size: 22px;
 	font-weight: 600;
+	margin: .5em 1em;
+	width: 100%;
+}
+
+@media (--wide-window-query) {
+		.newsletter-intro {
+			width: auto;
+			margin: 1em 1.5em;
+		}
 }
 
 .newsletter-signup .button {
 	text-align: center;
 	margin-top: 10px;
+	font-size: 20px;
+}
+
+.newsletter-signup .wpcf7-form-control-wrap .wpcf7-email{
+	padding: 1em;
+	margin-bottom: .8em;
 }
 
 .donate-cta,
