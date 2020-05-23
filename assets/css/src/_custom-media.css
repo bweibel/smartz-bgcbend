@@ -6,8 +6,8 @@
  **/
 
 @custom-media --narrow-menu-query screen and (max-width: 37.5em);
-@custom-media --mid-menu-query screen and (max-width: 83.5em);
-@custom-media --wide-menu-query screen and (min-width: 83.5em);
+@custom-media --mid-menu-query screen and (max-width: 87.5em);
+@custom-media --wide-menu-query screen and (min-width: 87.5em);
 @custom-media --content-query screen and (min-width: 48em);
 @custom-media --sidebar-query screen and (min-width: 60em);
 @custom-media --wide-window-query screen and (min-width: 60em);
