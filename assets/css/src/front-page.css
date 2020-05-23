@@ -5,6 +5,36 @@
 @import "_hero-image.css";
 @import "_feature-boxes.css";
 
+
+@media (--wide-menu-query) {
+	.home .main-navigation .menu {
+		padding-top: 90px;
+	}
+	.home .sticky .main-navigation .menu {
+		padding-top: 40px;
+	}
+
+	.main-navigation .menu{
+		transition: padding .5s;
+	}
+
+	.custom-logo {
+		width: 9em;
+	}
+
+	.sticky .custom-logo {
+    width: auto;
+	}
+
+	.site-branding {
+			padding: 2em 0 0 2rem;
+			transition: padding .5s;
+	}
+
+	.sticky .site-branding {
+		padding: 5px 0 0 2rem;
+}
+}
 /* Hero Image*/
 .hero {
 	grid-column: span 2;
@@ -36,6 +66,11 @@
 	}
 }
 
+.priority-outcomes {
+	margin-top: 0;
+	padding-top: 1em;
+}
+
 .outcome-list {
 	max-width: 60em;
 	margin-bottom: 3em;
@@ -50,7 +85,7 @@
 
 .outcome {
 	padding: 1em;
-	font-size: 16px;
+	font-size: 18px;
 	text-align: center;
 }
 
@@ -67,6 +102,7 @@
 .outcomes-copy {
 	text-align: center;
 	font-weight: bold;
+	font-size: 32px;
 }
 
 .entry-content {
@@ -75,9 +111,9 @@
 
 @media (--wide-window-query) {
 	.outcomes-copy {
-		font-size: 38px;
-		text-align: center;
-		font-weight: bold;
+		font-size: 52px;
+		max-width: 80%;
+		margin: 2em auto;
 	}
 }
 
