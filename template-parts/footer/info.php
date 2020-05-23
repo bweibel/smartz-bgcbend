@@ -20,14 +20,14 @@ $theme = get_template_directory_uri();
 				<p><strong>Administration Office & Downtown Location: </strong><br>
 				500 NW Wall Street <br>
 				Bend, OR 97703 <br>
-				<strong>(541) 617-2877</strong>
+				<strong><a href="tel:541-617-2877">(541) 617-2877</a></strong>
 				</p>
 			</div>
 			<div class="address">
 				<p><strong>East Bend Location: </strong><br>
 				1707 Tempest Dr. <br>
 				Bend, OR 97703 <br>
-				<strong>(541) 617-2877</strong>
+				<strong><a href="tel:541-385-3009">(541) 385-3009</a></strong>
 				</p>
 			</div>
 	</div>
