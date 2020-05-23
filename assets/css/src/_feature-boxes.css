@@ -12,6 +12,8 @@
 
 .feature-box .title {
   font-size: 34px;
+  max-width: 15em;
+  margin: 2em auto;
 }
 
 
