@@ -395,6 +395,7 @@ select {
 	height: 4rem;
 	box-shadow: 0 4px 6px 1px rgba(0,0,0,.4);
 	transition: background .4s , transform .4s ease-out;
+	z-index: 10;
 }
 
 .nav--toggle-small .menu {
@@ -410,10 +411,13 @@ select {
 }
 
 @media (--mid-menu-query) {
-
-	.nav--toggle-small.nav--toggled-on .menu {
-		height: 100vh;
+	.nav--toggle-small.nav--toggled-on .primary-menu-container{
+		height: calc(100vh - 44px);
 		overflow: auto;
+	}
+	
+	.nav--toggle-small.nav--toggled-on .menu {
+		height: auto;
 	}
 
 	.nav--toggle-small .menu-toggle {
@@ -590,10 +594,8 @@ select {
 	font-stretch: condensed;
 }
 
-@media (--narrow-menu-query) {
-	.main-navigation {
-		width: 100%;
-	}
+.primary-menu-container {
+	z-index: 10;
 }
 
 @media (--mid-menu-query) {
@@ -605,12 +607,33 @@ select {
 		z-index: 1;
 		right: 0;
 	}
+
+	.primary-menu-container > ul > li {
+		margin: 1em auto;
+	}
 }
+
+@media (--narrow-menu-query) {
+	.main-navigation {
+		width: 100%;
+	}
+
+	.main-navigation a{
+		text-align: center;
+	}
+
+	.primary-menu-container > ul > li {
+		margin: 2em auto;
+	}
+
+}
+
+
 
 .main-navigation a {
 	display: block;
 	width: 100%;
-	padding: 1em 1em 0.5em 1em;
+	padding: 1em;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 20px;
@@ -618,11 +641,14 @@ select {
 	color: var(--color-theme-white);
 }
 
+@media (--mid-menu-query) {
+
 @media (any-hover: hover) {
 	.main-navigation a:hover {
 		background-color: var(--color-theme-blue);
 		filter: brightness(110%);
 	}
+}
 }
 
 .primary-menu-container > ul > li:last-child a {
@@ -1047,7 +1073,8 @@ select {
 	.donate-cta span {
 		display: block;
 		padding: 5px;
-		font-weight: bold;	
+		font-weight: bold;
+		line-height: 30px;	
 	}
 
 	.donate-cta img {
@@ -1057,7 +1084,7 @@ select {
 	}
 
 	.donate-cta:hover{
-		transform: translateY(-3px);
+		transform: translateY(3px);
 		box-shadow: 0 5px 5px 0px rgba(0,0,0,.5);;
 	}
 }
@@ -1352,6 +1379,14 @@ select {
 	padding: .5em;
 }
 
+/* Slideshow fixes */
+.wpcp-carousel-wrapper {
+	max-width: 90vw;
+}
+
+.wpcp-carousel-section .slick-next, .wpcp-carousel-section .slick-prev {
+	z-index: 1;
+}
 
 
 /*--------------------------------------------------------------
