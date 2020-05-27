@@ -41,7 +41,12 @@
 	position: relative;
 }
 
-
+.hero .hero-img-wrap {
+	display: flex;
+	align-items: center;
+	max-height: 90vh;
+	overflow: hidden;
+}
 
 .hero .hero-cta {
 	background: white;

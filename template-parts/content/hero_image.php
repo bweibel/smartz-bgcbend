@@ -13,7 +13,9 @@ $hero = get_field('hero');
 ?>
 
 <section class="hero">
-	<img src="<?php echo esc_url( $hero['image']['url'] ); ?>" alt="<?php echo esc_attr( $hero['image']['alt'] ); ?>" />
+	<div class="hero-img-wrap">
+		<img src="<?php echo esc_url( $hero['image']['url'] ); ?>" alt="<?php echo esc_attr( $hero['image']['alt'] ); ?>" />
+	</div>
 	<div class="hero-cta">
 		<?php echo $hero['call_to_action']; ?>
 	</div>

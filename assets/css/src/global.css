@@ -654,6 +654,7 @@ select {
 .primary-menu-container > ul > li:last-child a {
 	background-color: white;
 	color: var(--color-theme-blue);
+	padding-top: 1.1em;
 }
 
 @media (--wide-menu-query) {
