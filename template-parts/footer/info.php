@@ -32,9 +32,9 @@ $theme = get_template_directory_uri();
 			</div>
 	</div>
 	<div class="social">
-				<a href="#"><img src="<?php echo $theme;?>/assets/images/BGCB-Website-Icon-Social-Facebook.svg" alt="Facebook"></a>
-				<a href="#"><img src="<?php echo $theme;?>/assets/images/BGCB-Website-Icon-Social-Twitter.svg" alt="Twitter"></a>
-				<a href="#"><img src="<?php echo $theme;?>/assets/images/BGCB-Website-Icon-Social-YouTube.svg" alt="Youtube"></a>
+				<a href="https://www.facebook.com/bgcbend" target="_blank"><img src="<?php echo $theme;?>/assets/images/BGCB-Website-Icon-Social-Facebook.svg" alt="Facebook"></a>
+				<a href="https://twitter.com/BGCBend" target="_blank"><img src="<?php echo $theme;?>/assets/images/BGCB-Website-Icon-Social-Twitter.svg" alt="Twitter"></a>
+				<a href="https://www.youtube.com/channel/UCZNcqKg1o3nMcDXBRvOxLyQ" target="_blank"><img src="<?php echo $theme;?>/assets/images/BGCB-Website-Icon-Social-YouTube.svg" alt="Youtube"></a>
 			</div>
 </div>
 
