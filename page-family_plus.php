@@ -64,12 +64,12 @@ $theme = get_template_directory_uri();
   <?php get_template_part( 'template-parts/content/programs_list' ); ?>
 
   </main><!-- #primary -->
-  <section class="blue blue-container">
+  <!-- <section class="blue blue-container">
     <div class="enrollment wrap-large">
       <div class="text">
         <h3 class="title">Family Plus Enrollment Form</h3>
         <p>The purpose of this form is to help us serve you, your children, and your family better. The more information you can share, the better we will be able to support your family. The information on this form will be kept strictly confidential and is only for the purpose of assessing needs, enrolling your family in the program, and creating a service plan.</p>
-        <p>Please download and complete the form and bring them in to our office or send them to:</p>
+        <p>Please download and complete the form and bring them in to our office or <a href="/members-families/family-plus/enroll/">submit them online</a> </p>
         <p><strong>Boys and Girls Club of Bend</strong><br>
             500 NW Wall Street<br>
             Bend, OR 97703
@@ -80,12 +80,7 @@ $theme = get_template_directory_uri();
         <a href="#" class="button button-blue">DOWNLOAD</a>
       </div>
       
-    </div>
-    <p class="contact-info"><strong>For more information please contact:</strong><br>
-    Alley Sabin, LCSW, Director of Youth & Family Services <br>
-    (541) 617-2877 ext. 6 or <a href="mailto:asabin@bgcbend.org">asabin@bgcbend.org</a>
-  </p>
-  </section>
+  </section> -->
 <?php
 get_sidebar();
 get_footer();
