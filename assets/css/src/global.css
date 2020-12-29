@@ -884,8 +884,13 @@ select {
 .site-footer a,
 .site-footer a:visited{
 	color: #fff;
+	text-decoration: none;
 }
 
+.site-footer a:hover{
+	text-decoration: underline;
+}
+ 
 .info {
 
 }
@@ -1108,6 +1113,33 @@ select {
 		font-size: 40px;
 		margin: 2em auto;
 	}
+}
+
+/* Blog */
+.blog {
+
+}
+
+.blog .post,
+.archive .post {
+	/* padding: 1em; */
+	border-bottom: 1px solid var(--color-theme-lightgrey);
+	
+}
+
+.blog .post .entry-title a,
+.archive .post .entry-title a {
+	text-decoration: none;
+}
+
+.blog .post .entry-title a:hover,
+.archive .post .entry-title a:hover {
+	text-decoration: underline;
+}
+
+.blog .post-thumbnail,
+.archive .post-thumbnail {
+	display: none;
 }
 
 /* Family Services */
