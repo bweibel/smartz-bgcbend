@@ -82,5 +82,5 @@ $theme = get_template_directory_uri();
       
   </section> -->
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

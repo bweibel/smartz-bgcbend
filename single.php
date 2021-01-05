@@ -17,10 +17,12 @@ $colors = ['blue', 'green', 'orange', 'purple'];
 $color = $colors[rand(0, 3)];
 
 ?>
-	<main id="primary" class="site-main">
 	<header class="entry-header <?php echo $color ?>">
 			<h1 class="entry-title">Events & News</h1>
 		</header>
+	<main id="primary" class="site-main">
+		<div>
+
 		<?php
 
 		while ( have_posts() ) {
@@ -30,8 +32,10 @@ $color = $colors[rand(0, 3)];
 
 			get_template_part( 'template-parts/content/entry', 'get_post_type()' );
 		}
+		
 		?>
+		</div>
+		<?php get_sidebar(); ?>
 	</main><!-- #primary -->
 <?php
-get_sidebar();
 get_footer();

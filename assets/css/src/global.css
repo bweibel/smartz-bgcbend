@@ -80,17 +80,24 @@
 
 @media (--sidebar-query) {
 
-	.has-sidebar .site {
-		margin: 0 1em;
-		display: grid;
-		grid-template-columns: 3fr 1fr;
-		grid-gap: 2rem;
-		justify-content: center;
-	}
+	
 
 	.site-main {
 		grid-column: 1;
 		min-width: 0;
+	}
+
+	.has-sidebar .site-main {
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		grid-gap: 2rem;
+		justify-content: center;
+		max-width: var(--content-width-large);
+	}
+
+	.has-sidebar {
+
 	}
 
 	.primary-sidebar {
@@ -1139,7 +1146,20 @@ select {
 
 .blog .post-thumbnail,
 .archive .post-thumbnail {
-	display: none;
+	/* display: none; */
+}
+
+.widget_recent_entries .post-date {
+	display: block;
+	font-size: 10px;
+}
+
+.primary-sidebar {
+	padding: 1em;
+}
+
+.primary-sidebar .widget_search {
+	margin-top: 20px;
 }
 
 /* Family Services */

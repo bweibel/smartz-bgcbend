@@ -27,5 +27,5 @@ wp_rig()->print_styles( 'wp-rig-content' );
 	</main><!-- #primary -->
 	<?php get_template_part( 'template-parts/content/newsletter_signup' ); ?>
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

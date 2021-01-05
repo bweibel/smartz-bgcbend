@@ -14,13 +14,13 @@ namespace WP_Rig\WP_Rig;
 	get_template_part( 'template-parts/content/entry_header', get_post_type() );
 
 
-	if ( is_search() || is_home()) {
+	if ( is_search() || is_home() ||( 'post' === get_post_type() || get_post_type_object( get_post_type() )->has_archive ) ) {
 		get_template_part( 'template-parts/content/entry_meta', get_post_type() );
 		get_template_part( 'template-parts/content/entry_summary', get_post_type() );
 	} else {
 		if ( is_singular( get_post_type() ) ){
 			if ( 'post' === get_post_type() || get_post_type_object( get_post_type() )->has_archive ) {
-			get_template_part( 'template-parts/content/entry_meta', get_post_type() );
+				get_template_part( 'template-parts/content/entry_meta', get_post_type() );
 			}
 		}
 		get_template_part( 'template-parts/content/entry_content', get_post_type() );
