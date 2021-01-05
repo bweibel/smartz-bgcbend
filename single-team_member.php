@@ -35,5 +35,5 @@ $color = $colors[rand(0, 3)];
 		?>
 	</main><!-- #primary -->
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

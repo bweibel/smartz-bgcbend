@@ -21,7 +21,6 @@ $color = $colors[rand(0, 3)];
 			<h1 class="entry-title">Events & News</h1>
 		</header>
 	<main id="primary" class="site-main">
-		<div>
 
 		<?php
 
@@ -34,7 +33,6 @@ $color = $colors[rand(0, 3)];
 		}
 		
 		?>
-		</div>
 		<?php get_sidebar(); ?>
 	</main><!-- #primary -->
 <?php

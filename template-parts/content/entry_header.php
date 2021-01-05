@@ -17,13 +17,13 @@ $color = $colors[rand(0, 3)];
 
 		// get_template_part( 'template-parts/content/entry_meta', get_post_type() );
 
-		if ( ! is_search() && !is_single()) {
+		if ( ! is_search() && !is_single() && !is_home() && !is_category() && !is_archive()) {
 			get_template_part( 'template-parts/content/entry_thumbnail', get_post_type() );
 		}
 		?>
 	
 </header><!-- .entry-header -->
-<?php if (is_single()) {
+<?php if (is_single() || is_home() || is_category( ) || is_archive()) {
 			get_template_part( 'template-parts/content/entry_thumbnail', get_post_type() );
 		}
 		?>
