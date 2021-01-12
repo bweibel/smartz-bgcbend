@@ -12,7 +12,9 @@ $theme = get_template_directory_uri();
 
 <div class="info wrap-large">
 	<div class="logo">
-		<img src="<?php echo $theme;?>/assets/images/BGCB-Website-Logo-Stacked-White.svg" alt="">
+		<img src="<?php echo $theme;?>/assets/images/BGCB-Website-Logo-Stacked-White.svg" alt="Boys & Girls Club of Bend Logo">
+		<img src="<?php echo $theme;?>/assets/images/unitedway-logo_white.png" alt="United Way of Bend Logo">
+
 	</div>
 	<div class="connect">
 		<h3>Connect With Us</h3>
