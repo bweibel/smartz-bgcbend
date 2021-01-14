@@ -477,6 +477,11 @@ select {
 		padding: .4em 0;
 	}
 
+	.sub-menu .menu-item a {
+		padding: .5em;
+		color: var(--color-theme-lightblue);
+	}
+
 	.sub-menu .menu-item a::before {
 			content: "- ";
 			margin-left: -1rem;
@@ -620,7 +625,7 @@ select {
 	}
 
 	.primary-menu-container > ul > li {
-		margin: 1em auto;
+		margin: auto;
 	}
 }
 
@@ -634,7 +639,7 @@ select {
 	}
 
 	.primary-menu-container > ul > li {
-		margin: 2em auto;
+		margin: 1em auto;
 	}
 
 }
@@ -944,6 +949,7 @@ select {
 	flex-grow: 3;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .info .connect h3{
