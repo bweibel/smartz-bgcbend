@@ -1043,6 +1043,11 @@ select {
 	margin-bottom: .8em;
 }
 
+/* Hide ReCAPTCHA badge */
+.grecaptcha-badge {
+	display: none !important;
+}
+
 .donate-cta,
 .donate-cta:visited {
 	background: var(--color-theme-green);
@@ -1449,13 +1454,20 @@ select {
 .team-member .team-description {
 	color: white;
 	margin-right: 1em;
-	min-width: 20em;
+	/* min-width: 20em; */
 	flex-basis: 20em;
+}
+
+team-member .team-description a{
+	color: var(--color-theme-white);
 }
 
 .team-member .post-thumbnail {
 	flex-basis: 12em;
 	padding: .5em;
+	position: sticky;
+	top: 100px;
+	align-self: start;
 }
 
 /* Slideshow fixes */

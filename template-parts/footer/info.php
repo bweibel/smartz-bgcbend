@@ -46,8 +46,11 @@ $theme = get_template_directory_uri();
 
 		<?php
 			printf("	<span>© %u %s.</span></br>", date('Y'), get_bloginfo());
-			printf("	<span>BGCB is a 501(c)(3) non-profit organization.</span>")
+			printf("	<span>BGCB is a 501(c)(3) non-profit organization.</span><br>");
 		?>
 	</span>
 	<span>All rights reserved.</span>
+	<br>
+	<span>This site is protected by reCAPTCHA and the Google <a href=”https://policies.google.com/privacy”>Privacy Policy</a> and <a href=”https://policies.google.com/terms”>Terms of Service</a> apply.</span>
+
 </div><!-- .site-info -->
