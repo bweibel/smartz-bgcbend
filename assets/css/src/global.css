@@ -1458,7 +1458,7 @@ select {
 	flex-basis: 20em;
 }
 
-team-member .team-description a{
+.team-member .team-description a{
 	color: var(--color-theme-white);
 }
 
